@@ -1,0 +1,29 @@
+{
+  "private": true,
+  "scripts": {
+    "precommit": "yarn && yarn test && yarn compile && yarn lint:fix",
+    "test": "jest --passWithNoTests",
+    "compile": "tsc",
+    "eslint": "eslint . --ext .ts",
+    "prettier": "prettier --check '**/*'",
+    "lint": "yarn -s eslint && yarn -s prettier",
+    "lint:fix": "yarn -s eslint --fix && yarn -s prettier --write"
+  },
+  "dependencies": {},
+  "devDependencies": {
+    "@types/jest": "^26.0.20",
+    "@types/node": "^14.14.27",
+    "@typescript-eslint/eslint-plugin": "^4.15.0",
+    "@typescript-eslint/parser": "^4.15.0",
+    "eslint": "^7.20.0",
+    "eslint-config-prettier": "^7.2.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-only-warn": "^1.0.2",
+    "eslint-plugin-sort-imports-es6-autofix": "^0.5.0",
+    "jest": "^26.6.3",
+    "prettier": "^2.2.1",
+    "ts-jest": "^26.5.1",
+    "ts-node": "^9.1.1",
+    "typescript": "^4.1.5"
+  }
+}
