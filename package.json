@@ -1,15 +1,19 @@
 {
   "private": true,
   "scripts": {
+    "start": "yarn -s build && probot run ./build/app",
     "precommit": "yarn && yarn test && yarn compile && yarn lint:fix",
     "test": "jest --passWithNoTests",
-    "compile": "tsc",
+    "build": "rm -rf build/* && tsc",
+    "compile": "tsc --noEmit",
     "eslint": "eslint . --ext .ts",
     "prettier": "prettier --check '**/*'",
     "lint": "yarn -s eslint && yarn -s prettier",
     "lint:fix": "yarn -s eslint --fix && yarn -s prettier --write"
   },
-  "dependencies": {},
+  "dependencies": {
+    "probot": "^11.0.6"
+  },
   "devDependencies": {
     "@types/jest": "^26.0.20",
     "@types/node": "^14.14.27",
