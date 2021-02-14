@@ -6,6 +6,7 @@
 !*.ts
 !*.js
 !*.json
+!*.html
 
 # Override and explicitly ignore...
 **/node_modules/
