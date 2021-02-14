@@ -1,3 +1,5 @@
+console.info("found me also")
+
 import { Probot } from "probot"
 
 export default (app: Probot) => {

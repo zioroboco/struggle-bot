@@ -1,10 +1,10 @@
 {
   "private": true,
   "scripts": {
-    "start": "yarn -s build && probot run ./build/app",
+    "ts-node": "node -r ts-node/register/transpile-only",
+    "start": "yarn -s ts-node node_modules/.bin/probot run lib/app.ts",
     "precommit": "yarn && yarn test && yarn compile && yarn lint:fix",
     "test": "jest --passWithNoTests",
-    "build": "rm -rf build/* && tsc",
     "compile": "tsc --noEmit",
     "eslint": "eslint . --ext .ts",
     "prettier": "prettier --check '**/*'",
