@@ -1,5 +1,3 @@
-console.info("found me")
-
 import { createNodeMiddleware, createProbot } from "probot"
 
 import app from "../../../lib/app"
